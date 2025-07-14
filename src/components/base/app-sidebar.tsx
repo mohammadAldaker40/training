@@ -10,7 +10,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { resturant } from "@/data";
-import { Home, Info, Mail, User } from "lucide-react";
+import { Home, Mail, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

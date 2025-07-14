@@ -40,6 +40,7 @@ export default function RootLayout({
                   <img
                     className="rounded-full size-16 object-cover"
                     src={resturant.default_data.logo}
+                    alt="logo"
                   />
                 </div>
                 <CardDescription className="flex  items-center justify-center text-pink-900">
