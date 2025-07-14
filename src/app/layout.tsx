@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { resturant } from "@/data";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
@@ -42,13 +43,18 @@ export default function RootLayout({
           <AppSidebar />
           <div className="flex flex-col w-full gap-4">
             <Card className="w-full h-fit ">
-              <CardContent className="grid grid-cols-2 ">
-                <img
-                  className="rounded-lg size-12 object-cover"
-                  src="/file.svg"
-                />
-                <CardDescription className="flex justify-start items-center">
-                  fjhslknsdfjklbnsfblkjnsdbkljnsdfblnsdjkflbnkdfn
+              <CardContent className="grid grid-cols-3 ">
+                <div className="flex justify-center">
+                  <img
+                    className="rounded-full size-16 object-cover"
+                    src={resturant.default_data.logo}
+                  />
+                </div>
+                <CardDescription className="flex  items-center justify-center text-pink-900">
+                  {resturant.default_data.name}
+                </CardDescription>
+                <CardDescription className="flex justify-center items-center text-pink-900">
+                  {resturant.default_data.slogan}
                 </CardDescription>
               </CardContent>
             </Card>
