@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { resturant } from "@/data";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/base/app-sidebar";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default function RootLayout({
             <Card className="w-full h-fit ">
               <CardContent className="grid grid-cols-3 ">
                 <div className="flex justify-center">
-                  <img
+                  <Image
                     className="rounded-full size-16 object-cover"
                     src={resturant.default_data.logo}
                     alt="logo"
